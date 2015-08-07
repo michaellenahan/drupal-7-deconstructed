@@ -429,7 +429,7 @@ while ($ancestor && isset($themes [$ancestor]->base_theme)) {
 
 It needs that list because it needs to initialize any ancestor themes along with the main theme, so that theme inheritance can work. So then it runs [`_drupal_theme_initialize`](https://api.drupal.org/api/drupal/includes%21theme.inc/function/_drupal_theme_initialize/7) on each of them, which adds the necessary CSS and JS, and then initializes the correct theme engine, if needed.
 
-After that, it resets the `drupal_alter` cache, because themes can have alter hooks, and we wouldn't want to ignore them becuase we had already built the cache by now.
+After that, it resets the `drupal_alter` cache, because themes can have alter hooks, and we wouldn't want to ignore them because we had already built the cache by now.
 
 ```
 drupal_static_reset('drupal_alter');
